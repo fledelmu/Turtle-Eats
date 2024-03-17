@@ -154,13 +154,7 @@ def player_forward():
         stamina_display.write(f"Stamina: {stamina}", align="right", font=("Arial", 16, "normal"))
     screen.ontimer(player_forward, 100)  
 
-def save_score():
-    with open("score.txt", "w") as file:
-        file.write(str(score))
-
 def game_end():
-    save_score()
-
     player_name = turtle.textinput("Game Over", "Enter your name:")
 
     if player_name:
